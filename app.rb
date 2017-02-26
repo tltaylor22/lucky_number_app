@@ -3,7 +3,7 @@ require 'sinatra'
 class LuckyNumberApp < Sinatra::Base
 
 	get '/' do
-		erb :name
+		erb :intro
 	end
 
 end
