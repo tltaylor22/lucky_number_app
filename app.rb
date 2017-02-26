@@ -6,6 +6,11 @@ class LuckyNumberApp < Sinatra::Base
 		erb :intro
 	end
 
+	post '/intro' do
+		yes = params[:yes_select]
+		redirect '/name?'
+	end
+
 end
 
 # number = 1
