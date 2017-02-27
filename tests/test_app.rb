@@ -14,6 +14,7 @@ class TestApp < Minitest::Test
 		assert(last_response.ok?)
 		assert(last_response.body.include?('Hello, would you like to play the Lucky Number Game?'))
 		assert(last_response.body.include?('<form class="center" action="/intro" method="post"'))
+		assert(last_response.body.include?('<input type="submit" value="YES"'))
 	end
 
 end

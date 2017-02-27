@@ -11,6 +11,10 @@ class LuckyNumberApp < Sinatra::Base
 		redirect '/name?'
 	end
 
+	# get '/name' do
+	# 	name = params[:name_input]
+	# 	redirect '/picknum?name=' + name
+	# end
 end
 
 # number = 1
