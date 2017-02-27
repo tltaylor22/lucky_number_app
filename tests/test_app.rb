@@ -17,10 +17,17 @@ class TestApp < Minitest::Test
 		assert(last_response.body.include?('<input type="submit" value="YES"'))
 	end
 
-	def test_ask_intro
+	def test_ask_name
 		get '/name'
 		assert(last_response.body.include?('Great, what is your name?'))
 		assert(last_response.body.include?('<form class="center" action="/name" method="post">'))
+	end
+
+	def test_pass_to_name
+		post '/name', name_input: 'Tim'
+		follow_redirect!
+		assert(last_response.body.include?('Tim'))
+		assert(last_response.ok?)
 	end
 
 end
