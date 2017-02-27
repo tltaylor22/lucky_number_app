@@ -9,12 +9,18 @@ class TestApp < Minitest::Test
 		LuckyNumberApp
 	end
 
-	def test_ask_to_play_on_entry_page
+	def test_ask_to_play_on_intro_page
 		get '/'
 		assert(last_response.ok?)
 		assert(last_response.body.include?('Hello, would you like to play the Lucky Number Game?'))
 		assert(last_response.body.include?('<form class="center" action="/intro" method="post"'))
 		assert(last_response.body.include?('<input type="submit" value="YES"'))
+	end
+
+	def test_ask_intro
+		get '/name'
+		assert(last_response.body.include?('Great, what is your name?'))
+		assert(last_response.body.include?('<form class="center" action="/name" method="post">'))
 	end
 
 end
