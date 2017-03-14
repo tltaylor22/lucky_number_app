@@ -39,9 +39,9 @@ class LuckyNumberApp < Sinatra::Base
 			if number % 3 == 0 && number % 5 == 0
 				results = "Congratualtions, you hit the JACKPOT!"
 			elsif number % 3 == 0
-				results = "Congratulations, you are a WINNER"
+				results = "Congratulations, you are a WINNER!"
 			elsif number % 5 == 0
-				results = "Congratulations, you are a WINNER"
+				results = "Congratulations, you are a WINNER!"
 			else
 				results
 			end
