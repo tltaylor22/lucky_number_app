@@ -2,12 +2,16 @@
 <link href="css/styles.css" rel="stylesheet">
 
 <br><br><br><br><br>
-<div class="bodycopy">Nice to meet you <%=name%>.<p> Let me tell you how the game works.<p> You are going to pick a number. If you pick a special number you will become a WINNER.<p> If you pick an extra special number you will win the JACKPOT!<P> Type your number in the box below to find out if you have a lucky number.</div>
-<br>
+<div class="subhead">Nice to meet you <%=name%>!</div><p>
+
+<div class="bodycopy">Let me tell you how the game works.<p> You are going to pick a number. If you pick a special number you will become a WINNER.<p> If you pick an extra special number you will win the JACKPOT!<P> Type your number in the box below to find out if you have a lucky number.</div>
+<!-- <br> -->
 <center><form class="center" action="/picknum" method="post">
 	<input type='number' name='number_input'>
 	<input type='text' name='name_input' value= <%=name%> hidden>
 	<p><input type='submit' value='submit'><p>
 </form></center>
+
+<center><img src="/../images/numbers18.png"></center>
 
 </html>
